@@ -2,10 +2,7 @@ import Head from 'next/head'
 import { getPosts } from '../services'
 import { PostCard, PostWidget,Categories } from '../components'
 
-const posts = [
-  {title:'MERN Stack Praktikum',excerpt:"MongoDB, ExpressJS, ReactJS, NodeJS"},
-  {title:'Digital Marketing',excerpt:"ADS, Instagram, Telegram"},
-]
+
 export default function Home({posts}) {
   // console.log(posts);
   return (
