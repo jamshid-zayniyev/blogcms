@@ -1,12 +1,7 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import { getPosts } from '@/services'
-// import styles from '@/styles/Home.module.css'
-import { PostCard, PostWidget } from '@/components'
-import Categories from '@/components/Categories'
+import { getPosts } from '../services'
+import { PostCard, PostWidget,Categories } from '../components'
 
-const inter = Inter({ subsets: ['latin'] })
 const posts = [
   {title:'MERN Stack Praktikum',excerpt:"MongoDB, ExpressJS, ReactJS, NodeJS"},
   {title:'Digital Marketing',excerpt:"ADS, Instagram, Telegram"},
@@ -23,7 +18,7 @@ export default function Home({posts}) {
       </Head>
       <div className='grid grid-cols-1 lg:grid-cols-12 gap-12'> 
         <div className='lg:col-span-8 col-span-1'>
-          {/* {posts.map(post=> <PostCard post={post} key={post.title}/> )} */}
+          {posts.map((post,index)=> <PostCard post={post.node} key={index}/> )}
         </div>
       </div>
       <div className='lg:col-span-4 col-span-1'>
