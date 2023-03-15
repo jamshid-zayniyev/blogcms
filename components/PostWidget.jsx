@@ -9,12 +9,10 @@ useEffect(()=>{
   if(slug){
     getSimilarPosts(categories,slug)
     .then(res=>setRelatedPosts(res))
-    console.log(true)
   }
   else{
     getRecentPosts()
     .then(res=>setRelatedPosts(res))
-    console.log(false)
   }
 },[slug])
 

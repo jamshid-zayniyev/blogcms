@@ -8,7 +8,6 @@ const Header = () => {
   useEffect(()=>{
     getCategories()
     .then(res=>setCategories(res))
-    console.log(categories);
   },[])
   return (
     <div className='container mx-auto mb-8 px-10'>
